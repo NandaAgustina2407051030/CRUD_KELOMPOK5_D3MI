@@ -101,3 +101,41 @@ cout << "=== SISTEM MANAJEMEN PASIEN RUMAH SAKIT ===\n";
             CRUD::ubahPasien(daftarPasien, id, namaBaru, usiaBaru, kategoriBaru);
             break;
         }
+        
+        case 4:
+        {
+            int id;
+            cout << "\n=== HAPUS PASIEN ===\n";
+            CRUD::tampilkanPasien(daftarPasien);
+            cout << "Masukkan ID Pasien yang akan dihapus: ";
+            cin >> id;
+
+            CRUD::hapusPasien(daftarPasien, id);
+            break;
+        }
+
+        case 5:
+        {
+            int id;
+            cout << "\n=== TAMBAH KE ANTRIAN ===\n";
+            CRUD::tampilkanPasien(daftarPasien);
+            cout << "Masukkan ID Pasien yang akan ditambah ke antrian: ";
+            cin >> id;
+
+            Pasien *pasien = SearchSort::cariPasienById(daftarPasien, id);
+            if (pasien != nullptr)
+            {
+                Queue::tambahPasien(antrianPasien, *pasien);
+            }
+            else
+            {
+                cout << "Pasien dengan ID " << id << " tidak ditemukan!\n";
+            }
+            break;
+        }
+
+        case 6:
+        {
+            Queue::tampilkanAntrian(antrianPasien);
+            break;
+        }
