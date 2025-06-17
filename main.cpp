@@ -37,3 +37,67 @@ cout << "=== SISTEM MANAJEMEN PASIEN RUMAH SAKIT ===\n";
     stack<Pasien> riwayatPasien;
 
     int pilihan;
+
+    do
+    {
+        tampilkanMenu();
+        cin >> pilihan;
+        cin.ignore(); // Clear input buffer
+
+        switch (pilihan)
+        {
+        case 1:
+        {
+            // Tambah Pasien Baru
+            int id, usia;
+            string nama, kategori;
+
+            cout << "\n=== TAMBAH PASIEN BARU ===\n";
+            cout << "Masukkan ID Pasien: ";
+            cin >> id;
+            cin.ignore();
+
+            cout << "Masukkan Nama Pasien: ";
+            getline(cin, nama);
+
+            cout << "Masukkan Usia Pasien: ";
+            cin >> usia;
+            cin.ignore();
+
+            cout << "Masukkan Kategori (Darurat/Rawat Jalan/Rawat Inap): ";
+            getline(cin, kategori);
+
+            CRUD::tambahPasien(daftarPasien, id, nama, usia, kategori);
+            break;
+        }
+
+        case 2:
+        {
+            CRUD::tampilkanPasien(daftarPasien);
+            break;
+        }
+
+        case 3:
+        {
+            int id, usiaBaru;
+            string namaBaru, kategoriBaru;
+
+            cout << "\n=== UBAH DATA PASIEN ===\n";
+            CRUD::tampilkanPasien(daftarPasien);
+            cout << "Masukkan ID Pasien yang akan diubah: ";
+            cin >> id;
+            cin.ignore();
+
+            cout << "Masukkan Nama Baru: ";
+            getline(cin, namaBaru);
+
+            cout << "Masukkan Usia Baru: ";
+            cin >> usiaBaru;
+            cin.ignore();
+
+            cout << "Masukkan Kategori Baru: ";
+            getline(cin, kategoriBaru);
+
+            CRUD::ubahPasien(daftarPasien, id, namaBaru, usiaBaru, kategoriBaru);
+            break;
+        }
