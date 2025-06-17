@@ -26,3 +26,14 @@ void tampilkanMenu()
     cout << "0. Keluar\n";
     cout << "Pilih menu: ";
 }
+
+int main()
+{
+cout << "=== SISTEM MANAJEMEN PASIEN RUMAH SAKIT ===\n";
+
+    // Data structures
+    vector<Pasien> daftarPasien;
+    queue<Pasien> antrianPasien;
+    stack<Pasien> riwayatPasien;
+
+    int pilihan;
