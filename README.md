@@ -9,3 +9,5 @@ Anggota Kelompok:
 # Apa itu Pemrogrman Modular?
 
 Pemrograman Modular (Modular Programming) adalah pendekatan pemrograman yang membagi sebuah program besar menjadi beberapa modul yang lebih kecil dan independen, jadi setiap modul memiliki fungsi khusus dan dapat beroperasi secara terpisah.
+
+Dengan membagi masalah menjadi beberapa modul, maka masalah tersebut akan menjadi lebih sederhana sehingga program dapat menjadi lebih mudah disusun dan dipahami.
