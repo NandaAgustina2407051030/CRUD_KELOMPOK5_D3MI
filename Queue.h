@@ -2,6 +2,7 @@
 #define QUEUE_H
 
 #include <queue>
+#include <stack>
 #include "Pasien.h"
 
 class Queue
