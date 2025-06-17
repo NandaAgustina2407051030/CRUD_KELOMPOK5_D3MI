@@ -139,3 +139,47 @@ cout << "=== SISTEM MANAJEMEN PASIEN RUMAH SAKIT ===\n";
             Queue::tampilkanAntrian(antrianPasien);
             break;
         }
+        
+        case 7:
+        {
+            cout << "\n=== LAYANI PASIEN ===\n";
+            Queue::layaniPasien(antrianPasien, riwayatPasien);
+            break;
+        }
+
+        case 8:
+        {
+            Stack::tampilkanRiwayat(riwayatPasien);
+            break;
+        }
+
+        case 9:
+        {
+            int id;
+            cout << "\n=== CARI PASIEN ===\n";
+            cout << "Masukkan ID Pasien yang dicari: ";
+            cin >> id;
+
+            Pasien *pasien = SearchSort::cariPasienById(daftarPasien, id);
+            if (pasien != nullptr)
+            {
+                cout << "\nPasien ditemukan:\n";
+                cout << "ID: " << pasien->id << "\n";
+                cout << "Nama: " << pasien->nama << "\n";
+                cout << "Usia: " << pasien->usia << "\n";
+                cout << "Kategori: " << pasien->kategori << "\n";
+            }
+            else
+            {
+                cout << "Pasien dengan ID " << id << " tidak ditemukan!\n";
+            }
+            break;
+        }
+
+        case 10:
+        {
+            cout << "\n=== URUTKAN BERDASARKAN USIA ===\n";
+            SearchSort::urutkanPasienBerdasarkanUsia(daftarPasien);
+            CRUD::tampilkanPasien(daftarPasien);
+            break;
+        }
