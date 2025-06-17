@@ -1,14 +1,29 @@
-#ifndef STACK_H
-#define STACK_H
+#include "Stack.h"
+#include <iostream>
 
-#include <stack>
-#include "Pasien.h"
-
-class Stack
+void Stack::tambahRiwayat(stack<Pasien> &riwayat, const Pasien &pasien)
 {
-public:
-    static void tambahRiwayat(stack<Pasien> &riwayat, const Pasien &pasien);
-    static void tampilkanRiwayat(stack<Pasien> riwayat);
-};
+    riwayat.push(pasien);
+    cout << "Pasien " << pasien.nama << " ditambahkan ke riwayat.\n";
+}
 
-#endif
+void Stack::tampilkanRiwayat(stack<Pasien> riwayat)
+{
+    cout << "\n=== RIWAYAT PASIEN (LIFO) ===\n";
+    if (riwayat.empty())
+    {
+        cout << "Riwayat kosong.\n\n";
+        return;
+    }
+
+    int nomor = 1;
+    while (!riwayat.empty())
+    {
+        Pasien pasien = riwayat.top();
+        cout << nomor << ". " << pasien.nama << " (ID: " << pasien.id
+             << ", Usia: " << pasien.usia << ", Kategori: " << pasien.kategori << ")\n";
+        riwayat.pop();
+        nomor++;
+    }
+    cout << "\n";
+}
