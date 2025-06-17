@@ -183,3 +183,35 @@ cout << "=== SISTEM MANAJEMEN PASIEN RUMAH SAKIT ===\n";
             CRUD::tampilkanPasien(daftarPasien);
             break;
         }
+
+        case 11:
+        {
+            cout << "\n=== URUTKAN BERDASARKAN NAMA ===\n";
+            SearchSort::urutkanPasienBerdasarkanNama(daftarPasien);
+            CRUD::tampilkanPasien(daftarPasien);
+            break;
+        }
+
+        case 0:
+        {
+            cout << "\nTerima kasih telah menggunakan Sistem Manajemen Pasien!\n";
+            break;
+        }
+
+        default:
+        {
+            cout << "\nPilihan tidak valid! Silakan pilih menu yang tersedia.\n";
+            break;
+        }
+        }
+
+        if (pilihan != 0)
+        {
+            cout << "\nTekan Enter untuk melanjutkan...";
+            cin.get();
+        }
+
+    } while (pilihan != 0);
+
+    return 0;
+}
