@@ -16,7 +16,7 @@ void CRUD::tampilkanPasien(const vector<Pasien> &daftar)
         return;
     }
 
-    cout << "ID\tNama\t\t\tUsia\tKategori\n";
+    cout << "ID\tNama\t\tUsia\tKategori\n";
     cout << "------------------------------------------------\n";
     for (const auto &pasien : daftar)
     {
