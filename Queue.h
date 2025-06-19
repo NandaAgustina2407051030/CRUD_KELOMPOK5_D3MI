@@ -1,5 +1,5 @@
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef QUEUE_H // mengecek apakah makro belum didefinisikan, cara bacanya jika belum ada makro bernama QUEUE_H...
+#define QUEUE_H // menandai bahwa file sudah pernah di-include,  lalu sekarang definisikan QUEUE_H agar kalau nanti file ini dipanggil lagi, bagian ini dilewati.
 
 #include <queue>
 #include <stack>
@@ -13,4 +13,4 @@ public:
     static bool layaniPasien(queue<Pasien> &antrian, stack<Pasien> &riwayat); //Melayani pasien pertama di antrian dan memasukkannya ke riwayat (stack)
 };
 
-#endif
+#endif // menutup blok include guard, Include guard berfungsi mencegah duplikasi isi file header saat di-include berkali-kali
