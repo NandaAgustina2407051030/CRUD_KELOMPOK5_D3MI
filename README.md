@@ -15,14 +15,20 @@ Dengan membagi masalah menjadi beberapa modul, maka masalah tersebut akan menjad
 # Tutorial Kompilasi 
 
 ## Compile semua file .cpp menjadi object files
+```bash
 g++ -c CRUD.cpp -o CRUD.o
 g++ -c Queue.cpp -o Queue.o
 g++ -c Stack.cpp -o Stack.o
 g++ -c SearchSort.cpp -o SearchSort.o
 g++ -c main.cpp -o main.o
+```
 
 ## Link semua object files menjadi executable
+```bash
 g++ CRUD.o Queue.o Stack.o SearchSort.o main.o -o CRUD_KELOMPOK5_D3MI.exe
+```
 
 ## Jalankan program
+```bash
 CRUD_KELOMPOK5_D3MI.exe
+```
