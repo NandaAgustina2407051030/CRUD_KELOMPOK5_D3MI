@@ -179,8 +179,8 @@ cout << "=== SISTEM MANAJEMEN PASIEN RUMAH SAKIT ===\n";
         case 10:
         {
             cout << "\n=== URUTKAN BERDASARKAN USIA ===\n";
-            SearchSort::urutkanPasienBerdasarkanUsia(daftarPasien);
-            CRUD::tampilkanPasien(daftarPasien);
+            SearchSort::urutkanPasienBerdasarkanUsia(daftarPasien); // Mengurutkan daftar pasien berdasarkan usia menggunakan algoritma sorting
+            CRUD::tampilkanPasien(daftarPasien); // Menampilkan daftar pasien yang sudah diurutkan
             break;
         }
 
